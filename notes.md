@@ -7,14 +7,17 @@ jobber som sikkerhetskonsulent i Syscom AS i Oslo
 
 Hva er OWASP top 10?
 
-OWASP står for Open Web Application Security Project, 
-Liste over mest vanlige sårbarheter. Samlet 
+### DEMOS
 
-DEMOS
 [X] A1 Injection
+
 [ ] A2 Broken Authentication and Session Management
+
 [ ] A3 Cross-Site Scripting (XSS)
+
 [ ] A4 Insecure Direct Object References
+
 [ ] A7 Missing Function Level Access Control
+
 [ ] A8 Cross-Site Request Forgery (CSRF)
 
