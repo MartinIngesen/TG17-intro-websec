@@ -27,7 +27,7 @@ def admin():
         return redirect('/')
 
     init_db()
-    
+
     username = request.form['username']
     password = request.form['password']
 

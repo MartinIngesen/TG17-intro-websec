@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>broken access</title>
+</head>
+<body>
+<h1>Edit your user account</h1>
+<p>Hello, {{ username }}!</p>
+
+<form action="{{'/edit/' + userid}}" method="post" class="add-entry">
+  <dl>
+    <dt>Description:
+    <dd><textarea name="text" rows="5" cols="40">{{ description }}</textarea>
+    <dd><input type="hidden" name="id"></textarea>
+    <dd><input type="submit" value="Send">
+  </dl>
+</form>
+
+<a href="/admin">Back!</a>
+</body>
+</html>

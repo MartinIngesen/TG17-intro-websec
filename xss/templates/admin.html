@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>XSS</title>
+</head>
+<body>
+<h1>Send en melding til admin!</h1>
+<p>Du er logget på som {{ username }}!</p>
+<a href="./logout">Log me out!</a>
+<br><br>
+{% if username != "admin" %}
+  <form action="{{ url_for('add_entry') }}" method="post" class="add-entry">
+    <dl>
+      <dt>Text:
+      <dd><textarea name="text" rows="5" cols="40"></textarea>
+      <dd><input type="submit" value="Send">
+    </dl>
+  </form>
+{% else %}
+<p>Here are the messages my dear lord:</p>
+{% autoescape false %}
+  {% for entry in entries %}
+    <li>{{ entry.entry }}</li>
+  {% endfor %}
+{% endautoescape %}
+{% endif %}
+
+</body>
+</html>
